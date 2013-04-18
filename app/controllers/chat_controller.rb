@@ -34,10 +34,10 @@ class ChatController < ApplicationController
           response.stream.write("data: #{data}\n\n") 
         end
       end
-    rescue IOError
-      Rails.logger.fatal IOError.inspect
-      redis.quit
+    rescue IOError  => msg
+      Rails.logger.fatal msg
     ensure 
+      redis.quit
       response.stream.close
     end 
   end

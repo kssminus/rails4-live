@@ -6,7 +6,12 @@ function chatroom_connect() {
   });
 }
 
-//$(document).ready(chatroom_connect);
+function message_send(){
+  $.post('/message', {'message':$("#chat").val()});
+  $("#chat").val("");
+}
+
+$(document).ready(chatroom_connect);
 $(document).ready(function() {
   $('#message_send').bind('click', message_send);
   $(document).bind('keypress', function(event){
@@ -16,7 +21,3 @@ $(document).ready(function() {
   });
 });
 
-function message_send(){
-  $.post('/message', {'message':$("#chat").val()});
-  $("#chat").val("");
-}
