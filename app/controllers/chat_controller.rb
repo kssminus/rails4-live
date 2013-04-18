@@ -12,7 +12,6 @@ class ChatController < ApplicationController
     begin
       redis = REDIS_CLIENT 
       if redis.publish('chatroom', params['message'])
-        #redis.quit
         render json: { result: 'ok'}.to_json
       else
         render json: { result: 'error'}.to_json

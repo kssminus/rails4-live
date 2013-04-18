@@ -6,7 +6,7 @@ function chatroom_connect() {
   });
 }
 
-$(document).ready(chatroom_connect);
+//$(document).ready(chatroom_connect);
 $(document).ready(function() {
   $('#message_send').bind('click', message_send);
   $(document).bind('keypress', function(event){

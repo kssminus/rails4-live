@@ -78,7 +78,4 @@ Rails4Live::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  require 'redis'
-  # Redis global connection for publish
-  REDIS_CLIENT = Redis.new
 end
