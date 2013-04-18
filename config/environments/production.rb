@@ -23,11 +23,11 @@ Rails4Live::Application.configure do
   config.serve_static_assets = false
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor  = :uglifier
+  # config.assets.js_compressor  = :uglifier
   # config.assets.css_compressor = :sass
 
   # Whether to fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true 
 
   # Generate digests for assets URLs.
   config.assets.digest = true
@@ -43,7 +43,7 @@ Rails4Live::Application.configure do
   # config.force_ssl = true
 
   # Set to :debug to see everything in the log.
-  config.log_level = :info
+  config.log_level = :debug
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
@@ -77,4 +77,8 @@ Rails4Live::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  require 'redis'
+  # Redis global connection for publish
+  REDIS_CLIENT = Redis.new
 end
