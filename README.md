@@ -16,3 +16,8 @@ A Simple Rails 4.0 chatting exmple.
     $ cd rails4-live
     $ bundle install
     $ rails server -d
+
+## Configuration
+You may configure redis client from config/initializers/redis.rb(default: "http://localhost:6379")
+
+    redis = Redis.new(:host => "10.0.1.1", :port => 6380)
