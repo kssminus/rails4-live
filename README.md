@@ -7,7 +7,7 @@ A Simple Rails 4.0 chatting exmple.
 ## Requirements
 
 - Ruby ~> 1.9.3
-- Ruby On Rails ~> 4.0beta1
+- Ruby On Rails => 4.0beta1
 - preinstalled Redis
 
 ## installation
